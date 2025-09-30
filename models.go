@@ -568,24 +568,24 @@ var (
 
 // PolicyRepresentation is a representation of a Policy
 type PolicyRepresentation struct {
-	Config           *map[string]string `json:"config,omitempty"`
-	DecisionStrategy *DecisionStrategy  `json:"decisionStrategy,omitempty"`
-	Description      *string            `json:"description,omitempty"`
-	ID               *string            `json:"id,omitempty"`
-	Logic            *Logic             `json:"logic,omitempty"`
-	Name             *string            `json:"name,omitempty"`
-	Owner            *string            `json:"owner,omitempty"`
-	Policies         *[]string          `json:"policies,omitempty"`
-	Resources        *[]string          `json:"resources,omitempty"`
-	Scopes           *[]string          `json:"scopes,omitempty"`
-	Type             *string            `json:"type,omitempty"`
-	RolePolicyRepresentation
-	JSPolicyRepresentation
-	ClientPolicyRepresentation
-	TimePolicyRepresentation
-	UserPolicyRepresentation
-	AggregatedPolicyRepresentation
-	GroupPolicyRepresentation
+	Config                         *map[string]string `json:"config,omitempty"`
+	DecisionStrategy               *DecisionStrategy  `json:"decisionStrategy,omitempty"`
+	Description                    *string            `json:"description,omitempty"`
+	ID                             *string            `json:"id,omitempty"`
+	Logic                          *Logic             `json:"logic,omitempty"`
+	Name                           *string            `json:"name,omitempty"`
+	Owner                          *string            `json:"owner,omitempty"`
+	Policies                       *[]string          `json:"policies,omitempty"`
+	Resources                      *[]string          `json:"resources,omitempty"`
+	Scopes                         *[]string          `json:"scopes,omitempty"`
+	Type                           *string            `json:"type,omitempty"`
+	RolePolicyRepresentation       `json:"rolePolicy,omitempty"`
+	JSPolicyRepresentation         `json:"jsPolicy,omitempty"`
+	ClientPolicyRepresentation     `json:"clientPolicy,omitempty"`
+	TimePolicyRepresentation       `json:"timePolicy,omitempty"`
+	UserPolicyRepresentation       `json:"userPolicy,omitempty"`
+	AggregatedPolicyRepresentation `json:"aggregatedPolicy,omitempty"`
+	GroupPolicyRepresentation      `json:"groupPolicy,omitempty"`
 }
 
 // RolePolicyRepresentation represents role based policies
